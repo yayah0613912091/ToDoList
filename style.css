@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #4b4b4b;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-container {
+    background: #677280;
+    padding: 20px;
+    border-radius: 10px;
+    width: 500px;
+    box-shadow: 0 4px 8px rgba(83, 81, 81, 0.1);
+}
+
+h1 {
+    text-align: center;
+    background-color: #4b4b4b;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: calc(100% - 50px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff9f43;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li {
+    background: #fff;
+    color: #031c3d;
+    margin: 2px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #bbb;
+}
+
+button.complete-btn {
+    position: absolute;
+    right: 45px;
+    padding: 5px;
+    border: none;
+    border-radius: 0px;
+    background-color: #4caf50;
+    cursor: pointer;
+    color: white;
+}
+
+button.delete-btn {
+    position: absolute;
+    right: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    color: rgb(95, 5, 5);
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    width: 10rem;
+    height: 3.2rem;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 30px;
+    position: relative;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #ff9f43;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
