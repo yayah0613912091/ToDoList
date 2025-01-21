@@ -1,0 +1,25 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yayah0613912091/ToDoList.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yayah0613912091/ToDoList/issues"
+  },
+  "homepage": "https://github.com/yayah0613912091/ToDoList#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {},
+  "description": ""
+}
