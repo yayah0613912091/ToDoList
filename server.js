@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html')); // Serve the index.html file explicitly
 });
  
-// Start the server
+// Start the servers
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}/`);
 })
