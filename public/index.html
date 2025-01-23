@@ -7,53 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="todo-container">
-        <h1>My To Do List</h1>
-        <div class="input-container">
-            <input type="text" id="todo-input" placeholder="Add a new task...">
-            <button id="add-btn">+</button>
+    <div class="todo-chart-container">
+        <div class="todo-container">
+            <h1>My To Do List</h1>
+            <div class="input-container">
+                <input type="text" id="todo-input" placeholder="Add a new task...">
+                <button id="add-btn">+</button>
+            </div>
+            <ul id="todo-list"></ul>
+            <select id="filter-select">
+                <option value="all">All</option>
+                <option value="incomplete">Incomplete</option>
+                <option value="complete">Complete</option>
+            </select>
         </div>
-        <ul id="todo-list"></ul>
+        <div class="chart-container">
+            <canvas id="tasksChart" width="400" height="400"></canvas>
+        </div>
     </div>
-    <select id="filter-select">
-        <option value="all">All</option>
-        <option value="incomplete">Incomplete</option>
-        <option value="complete">Complete</option>
-    </select>
-    
-    <ul id="todo-list"></ul>
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const filterSelect = document.querySelector('select');
-            const todoList = document.querySelectorAll('li');
-    
-            filterSelect.addEventListener('change', (e) => {
-                const filter = e.target.value;
-                todoList.forEach(todo => {
-                    switch (filter) {
-                        case "all":
-                            todo.style.display = "flex";
-                            break;
-                        case "completed":
-                            if (todo.classList.contains('completed')) {
-                                todo.style.display = "flex";
-                            } else {
-                                todo.style.display = "none";
-                            }
-                            break;
-                        case "incompleted":
-                            if (!todo.classList.contains('completed')) {
-                                todo.style.display = "flex";
-                            } else {
-                                todo.style.display = "none";
-                            }
-                            break;
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>

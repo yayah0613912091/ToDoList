@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #4b4b4b;
-    color: white;
+    background-color: #a08383;
+    color: rgb(255, 255, 255);
     text-align: center;
     margin: 0;
     padding: 0;
@@ -11,20 +11,28 @@ body {
     align-items: center;
 }
 
-.todo-container {
-    background: #677280;
+.todo-chart-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1000px;
+    background: #b9bfc7;
     padding: 20px;
     border-radius: 10px;
-    width: 500px;
-    box-shadow: 0 4px 8px rgba(83, 81, 81, 0.1);
+    box-shadow: 0 4px 8px rgba(134, 75, 75, 0.1);
+}
+
+.todo-container, .chart-container {
+    width: 48%;
 }
 
 h1 {
     text-align: center;
-    background-color: #4b4b4b;
+    background-color: #925656;
     margin-bottom: 20px;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .input-container {
@@ -44,9 +52,15 @@ input[type="text"] {
 button {
     padding: 10px;
     border: none;
-    border-radius: 5px;
-    background-color: #ff9f43;
+    border-radius: 20px;
+    background-color: #a04040;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #696969;
+    transform: scale(1.05);
 }
 
 ul {
@@ -56,8 +70,8 @@ ul {
 }
 
 li {
-    background: #fff;
-    color: #031c3d;
+    background: #b49d9d;
+    color: #000000;
     margin: 2px 0;
     padding: 10px;
     border-radius: 5px;
@@ -75,12 +89,18 @@ li {
 button.complete-btn {
     position: absolute;
     right: 45px;
-    padding: 5px;
+    padding: 8px;
     border: none;
-    border-radius: 0px;
+    border-radius: 5px;
     background-color: #4caf50;
     cursor: pointer;
-    color: white;
+    color: rgb(0, 0, 0);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.complete-btn:hover {
+    background-color: grey;
+    transform: scale(1.05);
 }
 
 button.delete-btn {
@@ -88,45 +108,33 @@ button.delete-btn {
     right: 10px;
     padding: 5px;
     border: none;
-    border-radius: 0px;
+    border-radius: 10px;
     cursor: pointer;
-    color: rgb(95, 5, 5);
+    color: rgb(194, 36, 36);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.delete-btn:hover {
+    background-color: grey;
+    transform: scale(1.05);
 }
 
 select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    outline: none;
+    padding: 5px;
     border: none;
-    color: rgb(0, 0, 0);
-    width: 10rem;
-    height: 3.2rem;
-    cursor: pointer;
-    padding: 1rem;
-    font-size: 16px;
-    text-align: center;
-    border-radius: 30px;
-    position: relative;
-}
-
-.select {
-    margin: 1rem;
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    margin: 10px;
     border-radius: 5px;
+    background-color: rgb(126, 67, 67);
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.select::after {
-    content: "\25BC";
-    position: absolute;
-    background: #ff9f43;
-    top: 0;
-    right: 0;
-    padding: 1rem;
-    pointer-events: none;
-    transition: all 0.3s ease;
+select:hover {
+    background-color: #949494;
+    transform: scale(1.05);
 }
 
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}

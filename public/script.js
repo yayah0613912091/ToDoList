@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const todoInput = document.getElementById('todo-input');
     const todoList = document.getElementById('todo-list');
     const filterSelect = document.getElementById('filter-select');
+    const tasksChart = document.getElementById('tasksChart').getContext('2d');
+
+    let chart;
 
     // Load todos from localStorage
     loadTodos();
@@ -25,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         saveTodos();
         todoInput.value = '';
+        updateChart();
     }
 
     function createTodoElement(taskText) {
@@ -39,12 +43,14 @@ document.addEventListener('DOMContentLoaded', () => {
             li.querySelector('span').classList.toggle('completed');
             saveTodos();
             filterTodos(); // Update the list based on the current filter
+            updateChart();
         });
 
         li.querySelector('.delete-btn').addEventListener('click', () => {
             li.remove();
             saveTodos();
             filterTodos(); // Update the list based on the current filter
+            updateChart();
         });
 
         return li;
@@ -70,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             todoList.appendChild(li);
         });
+        updateChart();
     }
 
     function filterTodos() {
@@ -86,5 +93,40 @@ document.addEventListener('DOMContentLoaded', () => {
                 todo.style.display = isCompleted ? 'none' : '';
             }
         }
+    }
+
+    function updateChart() {
+        const todos = todoList.getElementsByTagName('li');
+        let completedCount = 0;
+        let incompleteCount = 0;
+
+        for (let todo of todos) {
+            if (todo.querySelector('span').classList.contains('completed')) {
+                completedCount++;
+            } else {
+                incompleteCount++;
+            }
+        }
+
+        const data = {
+            labels: ['Completed Tasks', 'Incomplete Tasks'],
+            datasets: [{
+                data: [completedCount, incompleteCount],
+                backgroundColor: ['#800000', '#808080'] // Maroon and Grey
+            }]
+        };
+
+        if (chart) {
+            chart.destroy();
+        }
+
+        chart = new Chart(tasksChart, {
+            type: 'pie',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
     }
 });
