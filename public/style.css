@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #D1DBE4; /* Dark grey background */
-    color: #f0f0f0; /* Light grey text */
+    background-color: #D1DBE4; /* light blue background */
+    color: #f0f0f0; /* white text */
     text-align: center;
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@ body {
     align-items: flex-start;
     width: 90%;
     max-width: 1000px;
-    background: #A3B7CA; /* Medium grey background */
+    background: #A3B7CA; /* Medium blue background */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
@@ -29,7 +29,7 @@ body {
 
 h1 {
     text-align: center;
-    background-color: #7593af; /* Slightly lighter grey */
+    background-color: #7593af; /* Slightly lighter blue */
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 10px;
@@ -54,8 +54,8 @@ input[type="text"] {
     border: none;
     border-radius: 5px;
     outline: none;
-    background-color: #7593af; /* Lighter grey */
-    color: #000000; /* Light grey text */
+    background-color: #7593af; /* Lighter blue */
+    color: #000000; /* black text */
     text-overflow: ellipsis;
    overflow: hidden;
    max-width: 100% ;
@@ -65,10 +65,10 @@ button {
     padding: 10px;
     border: none;
     border-radius: 20px;
-    background-color: #007bff; /* Naive blue */
+    background-color: #007bff; /* blue */
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    color: #f0f0f0; /* Light grey text */
+    color: #f0f0f0; /* white text */
 }
 
 button:hover {
@@ -83,8 +83,8 @@ ul {
 }
 
 li {
-    background: #7593af; /* Slightly lighter grey */
-    color: #000000; /*  grey text */
+    background: #7593af; /* Slightly lighter blue */
+    color: #000000; /* black text */
     margin: 2px 0;
     padding: 10px;
     border-radius: 5px;
@@ -107,7 +107,7 @@ li {
 
 .completed {
     text-decoration: line-through;
-    color: #000000; /* Light grey */
+    color: #000000; /* black */
 }
 
 button.complete-btn {
@@ -118,7 +118,7 @@ button.complete-btn {
     border-radius: 5px;
     background-color: #4caf50; /* Green */
     cursor: pointer;
-    color: #000000; /* Light grey text */
+    color: #000000; /* black text */
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -148,15 +148,15 @@ select {
     padding: 5px;
     border: none;
     border-radius: 5px;
-    background-color: #7593af; /* Lighter grey */
+    background-color: #7593af; /* Lighter blue */
     cursor: pointer;
     margin-top: 20px;
-    color: #ffffff; /* Light grey text */
+    color: #ffffff; /* white text */
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 select:hover {
-    background-color: #476f95; /* Slightly lighter grey */
+    background-color: #476f95; /* Slightly lighter blue */
     transform: scale(1.05);
 }
 
