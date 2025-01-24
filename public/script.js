@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
             labels: ['Completed Tasks', 'Incomplete Tasks'],
             datasets: [{
                 data: [completedCount, incompleteCount],
-                backgroundColor: ['#476f95', '#808080'] // Maroon and Grey
+                backgroundColor: ['#476f95', '#808080'] // slightly blue and Grey
             }]
         };
 
